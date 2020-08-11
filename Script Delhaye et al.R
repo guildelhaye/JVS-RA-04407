@@ -14,9 +14,7 @@ library(pez)
 library(geiger)
 
 ###### Data 
-## Traits data. Here we use the raw data although in the paper the log10 transformed data were
-## used for the CWM (but not for the other indices as it can cause mathematical problems)
-## This does not change the relationships between the indices and the soil Cu gradient
+## Traits data.
 traits <- read.table("Traits.csv", sep = ";", dec = ".", header = T, row.names = 1)
 df.fun.s <- as.data.frame(traits[,c(2,3,4,5,6,7,8,9,13,14)])
 colnames(df.fun.s) <- c("VH","Prof", "LA",'LDMC',"LT","SLA","N","SM","Cu","Co")
